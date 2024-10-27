@@ -147,16 +147,20 @@ var mutableFruitsDic: [String: Int] = ["apple": 1, "banana": 2, "orange": 3]
 print(mutableFruitsDic)
 mutableFruitsDic["apple"] = 4
 print(mutableFruitsDic)
+
 // Removing Values: Remove a key-value pair from the dictionary.
 mutableFruitsDic.removeValue(forKey: "banana")
 print(mutableFruitsDic)
+
 // Checking for Keys: Verify if a key exists in the dictionary.
 let hasApple = mutableFruitsDic.keys.contains("apple") // true
 print(hasApple)
+
 //Iterating Over Key-Value Pairs: Loop through all entries in the dictionary.
 for (fruit, count) in mutableFruitsDic {
     print("\(fruit): \(count)")
 }
+
 //Getting All Keys or Values: Retrieve all keys or values as arrays.
 let allFruits = Array(mutableFruitsDic.keys)
 let allCounts = Array(mutableFruitsDic.values)
