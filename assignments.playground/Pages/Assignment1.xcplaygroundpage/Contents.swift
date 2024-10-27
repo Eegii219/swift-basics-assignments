@@ -8,7 +8,7 @@ var greeting = "Hello, Assignment 1"
 //COLLECTIONS
 
 //=================== ARRAY INITIALIZATIONS ================
-
+print("Array")
 let a1 = [1, 2, 3, 4, 5]
 
 //let animals: [String] = ["cat", "dog", "bird"]
@@ -85,16 +85,58 @@ print(nums3)
 
 //=================== SET INITIALIZATIONS ================
 
-//SET
-var numbers:Set<Int> = [1,2,3,3,4,5]
-print(numbers)
-numbers.insert(6)
-print(numbers)
-numbers.remove(6)
-print(numbers)
+let fruits2:Set<String> = ["apple", "banana", "cherry"]
+let nums:Set<Int> = [1,2,3,4,5]
+let emtSet:Set<Int> = []
+let emptySet:Set<Int> = Set<Int>()
 
-var numbers2:Set<Int> = [1,2,3,3,4,5]
+var items:Set<String> = ["laptop", "mug", "pencil"]
+items.insert("pen")
 
-print()
+// ==================== SET OPERATIONS ==========================
+print("Set")
+
+//Union: Combines two sets, removing any duplicates.
+let set1: Set = [1, 2, 3]
+let set2: Set = [3, 4, 5]
+let unionSet = set1.union(set2) // [1, 2, 3, 4, 5]
+print(unionSet)
+
+//Intersection: Creates a new set with only the common(repeated) elements between two sets.
+let intersectionSet = set1.intersection(set2) // [3]
+print(intersectionSet)
+
+//Subtraction: Creates a new set with elements that are not in another set.
+let subtractionSet = set1.subtracting(set2) // [1]
+print("subtractionSet: \(subtractionSet)")
+
+//Symmetric Difference: Creates a new set with elements that are in either set, but not in both.let
+let symmetricDifferenceSet = set1.symmetricDifference(set2) // [1, 2, 4, 5]
+print(symmetricDifferenceSet)
+
+//Insert: Adds an element to a mutable set.
+var mutableSet: Set = [1, 2, 3]
+mutableSet.insert(4)
+
+//Remove: Removes an element from a mutable set.
+mutableSet.remove(2)
+
+//Contains: Checks if an element is in the set.
+let containsElement = mutableSet.contains(3) // true
+
+
+
+//=============== DICTIONARY INITIALIZATIONs================
+//Empty Dictionary:
+let emptyDict = [String: Int]()
+//Dictionary with Initial Key-Value Pairs:
+let fruitsDic = ["apple": 1, "banana": 2, "orange": 3]
+//Dictionary with Explicit Type Annotation:
+let scores: [String: Int] = ["Alice": 95, "Bob": 80, "Charlie": 85]
+//Dictionary with Type Inference:
+let colors = ["red": "#FF0000", "green": "#00FF00", "blue": "#0000FF"]
+//Mutable Dictionary:
+var mutableDict: [String: Bool] = ["isLoggedIn": false, "isAdmin": true]
+
 
 
