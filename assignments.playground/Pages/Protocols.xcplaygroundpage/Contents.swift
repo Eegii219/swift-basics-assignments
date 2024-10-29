@@ -174,8 +174,12 @@ let totalItems = greenSoup.howMuchItemIn()
 print("Total items: \(totalItems)")
 
 
+// Iterating through ingredients
 let ingredients = greenSoup.whatAreTheIngr()
-for(ingredient : quantity) in ingredients {
+print("All items and quantities:")
+for (ingredient , quantity) in ingredients {
+
     print("\(ingredient): \(quantity)")
 }
+
 
