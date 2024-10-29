@@ -45,10 +45,10 @@ while count > 0 {
 }
 
 //repeat-while: Similar to while, but it executes the loop at least once.
-
-var count1 = 5
+print("repeat-while")
+var count1 = 0
 repeat {
-    print("Count is \(count)")
+    print("Count is \(count1)")
     count1 -= 1
 } while count1 > 0
 
@@ -290,6 +290,7 @@ let point1 = Point(x: 3, y: 4)
 
 let point2 = Point(x: 7, y: 1)
 
+print("point struct")
 print(point1.distance(to: point2)) // Output: 5.0
 
 // ============ COMPARISON OF STRUCT AND CLASS ==================
@@ -326,7 +327,7 @@ struct PersonStruct {
    
     var name: String
     var age: Int
-
+    
 }
 
 class PersonClass {
@@ -364,3 +365,9 @@ personClass2.name = "Bob"
 print(personClass1.name) // Output: Bob (original affected)
 
 print(personClass2.name) // Output: Bob
+
+
+
+//Practice on Optional chain!!!!
+
+// optional is for nil?
