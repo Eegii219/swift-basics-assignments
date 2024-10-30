@@ -95,6 +95,7 @@ class Student: Person, StudentProtocol {
 //Protocol/interface that verifies wheather student or not
 protocol StudentProtocol {
     func isStudent( id : Int) -> Bool
+
 }
 
 //Protocol Optionl method for class
@@ -108,6 +109,7 @@ extension StudentProtocol {
                     
 // Usage Example
 let student = Student( id: 123, name: "John Doe", cellPhone: 1234567890)
+//print(student)
 print("Is student with ID 123? \(student.isStudent(id: 123))")
 print("Is phone active? \(student.isPhoneActive(answer: "yes"))")
                     
@@ -181,5 +183,74 @@ for (ingredient , quantity) in ingredients {
 
     print("\(ingredient): \(quantity)")
 }
+
+
+print("======================== PROTOCOL INHERITANCE =========================")
+
+protocol DrivingProtocol {
+    func drive() -> Bool
+    func stop() -> Bool
+    func brake() -> String
+}
+
+protocol Vehicle: DrivingProtocol {
+    func keyTurn() -> Bool
+    
+}
+
+
+struct Car: Vehicle {
+    var make: String
+    var model: String
+    
+    func keyTurn() -> Bool {
+        return true
+    }
+    
+    func drive() -> Bool {
+        return true
+    }
+    
+    func stop() -> Bool {
+        return true
+    }
+    
+    func brake() -> String {
+        return "slowing"
+    }
+    
+    
+}
+
+
+protocol Cook{
+    func boil() -> String
+}
+
+protocol Prepare {
+    func chop() -> String
+}
+
+typealias CookAndPrepare = Cook & Prepare
+
+struct MakeSoup: CookAndPrepare {
+    
+    
+    var broth: String
+    var ingredients: [String: Int]
+    var protein: String?
+    
+    func boil() -> String {
+        return "Boiling water"
+    }
+    func chop() -> String {
+        return "Chopping vegetables"
+    }
+}
+
+
+var str = "abc"
+var capitalized = str.capitalized
+print(capitalized)
 
 

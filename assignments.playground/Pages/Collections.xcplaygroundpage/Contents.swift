@@ -51,8 +51,10 @@ print(pets)
 pets.append("snake")
 print(pets)
 pets.remove(at: 3)
+pets.removeLast()
+
 print(pets)
-pets[2] = "elephant"
+//pets[2] = "elephant"
 print(pets)
 
 //======================== ARRAY OPERTATIONS==================================
@@ -92,6 +94,7 @@ let emptySet:Set<Int> = Set<Int>()
 
 var items:Set<String> = ["laptop", "mug", "pencil"]
 items.insert("pen")
+print(items)
 
 // ==================== SET OPERATIONS ==========================
 print("Set")
@@ -107,7 +110,7 @@ let intersectionSet = set1.intersection(set2) // [3]
 print(intersectionSet)
 
 //Subtraction: Creates a new set with elements that are not in another set.
-let subtractionSet = set1.subtracting(set2) // [1]
+let subtractionSet = set1.subtracting(set2) // [1,2]
 print("subtractionSet: \(subtractionSet)")
 
 //Symmetric Difference: Creates a new set with elements that are in either set, but not in both.let
@@ -164,3 +167,7 @@ for (fruit, count) in mutableFruitsDic {
 //Getting All Keys or Values: Retrieve all keys or values as arrays.
 let allFruits = Array(mutableFruitsDic.keys)
 let allCounts = Array(mutableFruitsDic.values)
+
+
+
+
