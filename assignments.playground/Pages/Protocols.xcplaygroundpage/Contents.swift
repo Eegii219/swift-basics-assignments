@@ -1,6 +1,11 @@
 import Foundation
 
 var greeting = "Hello, Protocol"
+/*
+ Protocol:
+    -inheritance
+    -liase = combine prorocols and assigning into variable
+ */
 
 print("=================== Simple Apple Struct and Protocol ===================")
 
