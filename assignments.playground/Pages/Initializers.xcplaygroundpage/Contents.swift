@@ -32,6 +32,7 @@ struct Employer{
     var position: String
     
 }
+
 /*
 3. Convience Initializer / init overlodading!!!
 */
@@ -40,6 +41,7 @@ class Person1{
     var name: String
     var age: Int?
     var gender: String
+  
     //designated initializer makes sure when we instantiate a object this value is assigned
     init (name:String){
         self.name = name
@@ -58,8 +60,8 @@ print("======= CONVENIENCE INITIALIZER INSTANTIATION OUTPUT =======")
 
 let p1 = Person1(name:"Alice")
 let p2 = Person1("Female", 21)
-
-print("Name:\(p1.name), gender:\(p1.gender),age: \(String(describing: p1.age))")//Name:Alice, gender:,age: nil
+let p3 = Person1(name:"P3")
+print("Name:\(p1.name), \(p1.gender),age: \(String(describing: p1.age))")//Name:Alice, gender:,age: nil
 print("P2 name:\(p2.name) , \(p2.gender)")//P2 name: , Female
 /*
  4. Failable Initializer

@@ -4,7 +4,9 @@ var greeting = "Hello, Protocol"
 /*
  Protocol:
     -inheritance
-    -liase = combine prorocols and assigning into variable
+    -aliase = combine prorocols and assigning into variable
+    - associcated type : place holder fot variable type
+    
  */
 
 print("=================== Simple Apple Struct and Protocol ===================")
